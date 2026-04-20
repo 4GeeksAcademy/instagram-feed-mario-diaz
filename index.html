@@ -24,209 +24,305 @@
                 <i class="fa-brands fa-instagram fs-3 me-2"></i>
                 Instagram
             </a>
-            <button type="button" class="btn btn-success ms-auto me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">
-                Create a new post
-            </button>
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <i class="fa-solid fa-gear"></i>
+
+
+            <div class="d-flex align-items-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Create a new post
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">Account</a></li>
-                    <li><a class="dropdown-item" href="#">Preferences</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
-                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+
+                    <!-- Preferences -->
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Account</a></li>
+                        <li><a class="dropdown-item" href="#">Preferences</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">New Post</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="captionTextarea" class="form-label fw-bold">Caption:</label>
+                                <textarea class="form-control" id="captionTextarea" rows="3"
+                                    placeholder="Add the caption of your post here"></textarea>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-light border btn-sm">
+                                    <i class="fa-solid fa-camera"></i>
+                                </button>
+                                <button class="btn btn-light border btn-sm">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </nav>
 
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Take a look at this rock!</h5>
-                        <small class="text-muted">11/26</small>
+    <!-- NavPills -->
+    <ul class="nav nav-tabs mt-3 justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                    class="fa-regular fa-square"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                    class="fa-solid fa-table-cells"></i></button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <!-- Posts -->
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <!-- Posts -->
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Take a look at this rock!</h5>
+                                <small class="text-muted">11/26</small>
+                            </div>
+                            <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg"
+                                class="card-img-top" alt="Lunar rock">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">20012 Likes</p>
+                                <p class="card-text">
+                                    This might look like a rock, and it is indeed a rock.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">20012 Likes</p>
-                        <p class="card-text">
-                            This might look like a rock, and it is indeed a rock.
-                        </p>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Rocket!</h5>
+                                <small class="text-muted">01/26</small>
+                            </div>
+                            <img src="https://storage.googleapis.com/nextspaceflight/media/rockets/Saturn_V.webp"
+                                class="card-img-top" alt="Nasa Rocket">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">104 Likes</p>
+                                <p class="card-text">
+                                    This might look like a rocket, and it is indeed a rocket.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Spotted an Alien!</h5>
+                                <small class="text-muted">03/26</small>
+                            </div>
+                            <img src="https://media.newyorker.com/photos/64ca89f569af7f8649142d29/1:1/w_1010,h_1010,c_limit/Wiley-UFO-03.jpg"
+                                class="card-img-top" alt="Photo of an UFO">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">54412 Likes</p>
+                                <p class="card-text">
+                                    This might look like a UFO, and it is indeed a UFO.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Neil's Footprint!</h5>
+                                <small class="text-muted">11/26</small>
+                            </div>
+                            <img src="https://wallartprints4u.com/cdn/shop/products/moon-footprint-poster-vintage-astronaut-first-footprint-on-the-moon-1969posters-8x10-matte-0-462914_600x600_crop_center.jpg?v=1708709394"
+                                class="card-img-top" alt="Lunar rock">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">204 Likes</p>
+                                <p class="card-text">
+                                    This might look like a footprint, and it is indeed a footprint.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">A few artificial Satelites!</h5>
+                                <small class="text-muted">08/26</small>
+                            </div>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZASR84cuVJwZ-5Qx-e47nq20fC8DUwcr9qDtnmx-G8A&s=10"
+                                class="card-img-top" alt="Satelite">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">94285 Likes</p>
+                                <p class="card-text">
+                                    This might look like a satelite, and it is indeed a satelite.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">Neptune!</h5>
+                                <small class="text-muted">02/26</small>
+                            </div>
+                            <img src="https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/neptune-1.jpg"
+                                class="card-img-top" alt="Planet Neptune">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">5490 Likes</p>
+                                <p class="card-text">
+                                    This might look like Neptune, and it is indeed Neptune.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">The Pillars of Creation!</h5>
+                                <small class="text-muted">01/26</small>
+                            </div>
+                            <img src="https://skyimagelab.com/cdn/shop/products/H1501c-New-Pillars-of-Creation-IMAGE-sq-web_1024x1024.jpg?v=1615830625"
+                                class="card-img-top" alt="Pillars of Creation nebula">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">19487 Likes</p>
+                                <p class="card-text">
+                                    This might look like the Pillars of Creation nebula , and it is indeed the Pillars of Creation nebula.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">A galaxy!</h5>
+                                <small class="text-muted">05/26</small>
+                            </div>
+                            <img src="https://www.meisterdrucke.es/kunstwerke/1260px/National%20Aeronautics%20and%20Space%20Administration%20National%20Aeronautics%20and%20Space%20Adm%20-%20Image%20of%20the%20Andromeda%20galaxy%20M31%20captured%20by%20NASAs%20Wide-fie%20-%20%28MeisterDrucke-602666%29.jpg"
+                                class="card-img-top" alt="Andromeda galaxy">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">24705 Likes</p>
+                                <p class="card-text">
+                                    This might look like the Andromeda galaxy, and it is indeed the Andromeda galaxy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">The North Star!</h5>
+                                <small class="text-muted">03/26</small>
+                            </div>
+                            <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:170,cw:683,ch:683,q:80,w:683/adioVnroecNkF7z2RSNDWQ.jpg"
+                                class="card-img-top" alt="The North Star">
+                            <div class="card-body">
+                                <p class="card-text fw-bold mb-1">127604 Likes</p>
+                                <p class="card-text">
+                                    Did you know that what's called the North Star is really a three-star system where two of them are so close together and the third orbits around the central couple?
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Rocket!</h5>
-                        <small class="text-muted">01/26</small>
+        <!-- Grid Photos -->
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="container my-3">
+                <div class="row row-cols-3 g-3">
+                    <!-- Grid Photos -->
+                    <div class="col">
+                        <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
-                    <img src="https://storage.googleapis.com/nextspaceflight/media/rockets/Saturn_V.webp"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">104 Likes</p>
-                        <p class="card-text">
-                            This might look like a rocket, and it is indeed a rocket.
-                        </p>
+                    <div class="col">
+                        <img src="https://storage.googleapis.com/nextspaceflight/media/rockets/Saturn_V.webp" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Spotted an Alien!</h5>
-                        <small class="text-muted">11/26</small>
+                    <div class="col">
+                        <img src="https://media.newyorker.com/photos/64ca89f569af7f8649142d29/1:1/w_1010,h_1010,c_limit/Wiley-UFO-03.jpg" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
-                    <img src="https://media.newyorker.com/photos/64ca89f569af7f8649142d29/1:1/w_1010,h_1010,c_limit/Wiley-UFO-03.jpg"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">54412 Likes</p>
-                        <p class="card-text">
-                            This might look like a UFO, and it is indeed a UFO.
-                        </p>
+                    <div class="col">
+                        <img src="https://wallartprints4u.com/cdn/shop/products/moon-footprint-poster-vintage-astronaut-first-footprint-on-the-moon-1969posters-8x10-matte-0-462914_600x600_crop_center.jpg?v=1708709394" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Take a look at this rock!</h5>
-                        <small class="text-muted">11/26</small>
+                    <div class="col">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZASR84cuVJwZ-5Qx-e47nq20fC8DUwcr9qDtnmx-G8A&s=10" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
-                    <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">204 Likes</p>
-                        <p class="card-text">
-                            This might look like a rock, and it is indeed a rock.
-                        </p>
+                    <div class="col">
+                        <img src="https://www.asc-csa.gc.ca/images/astronomie/systeme-solaire/neptune-1.jpg" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Take a look at this rock!</h5>
-                        <small class="text-muted">11/26</small>
+                    <div class="col">
+                        <img src="https://skyimagelab.com/cdn/shop/products/H1501c-New-Pillars-of-Creation-IMAGE-sq-web_1024x1024.jpg?v=1615830625" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
-                    <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">204 Likes</p>
-                        <p class="card-text">
-                            This might look like a rock, and it is indeed a rock.
-                        </p>
+                    <div class="col">
+                        <img src="https://www.meisterdrucke.es/kunstwerke/1260px/National%20Aeronautics%20and%20Space%20Administration%20National%20Aeronautics%20and%20Space%20Adm%20-%20Image%20of%20the%20Andromeda%20galaxy%20M31%20captured%20by%20NASAs%20Wide-fie%20-%20%28MeisterDrucke-602666%29.jpg" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Take a look at this rock!</h5>
-                        <small class="text-muted">11/26</small>
-                    </div>
-                    <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">204 Likes</p>
-                        <p class="card-text">
-                            This might look like a rock, and it is indeed a rock.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Take a look at this rock!</h5>
-                        <small class="text-muted">11/26</small>
-                    </div>
-                    <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">204 Likes</p>
-                        <p class="card-text">
-                            This might look like a rock, and it is indeed a rock.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Take a look at this rock!</h5>
-                        <small class="text-muted">11/26</small>
-                    </div>
-                    <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">204 Likes</p>
-                        <p class="card-text">
-                            This might look like a rock, and it is indeed a rock.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Take a look at this rock!</h5>
-                        <small class="text-muted">11/26</small>
-                    </div>
-                    <img src="https://www.nhm.at/jart/prj3/nhm-resp/images/cache/e267ee59b6f6812dceb57c8aacc19f9c/0x6792AADCF223001CB09C1EF083B52E46.jpeg"
-                        class="card-img-top" alt="Lunar rock">
-                    <div class="card-body">
-                        <p class="card-text fw-bold mb-1">204 Likes</p>
-                        <p class="card-text">
-                            This might look like a rock, and it is indeed a rock.
-                        </p>
+                    <div class="col">
+                        <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:170,cw:683,ch:683,q:80,w:683/adioVnroecNkF7z2RSNDWQ.jpg" class="img-fluid w-100 object-fit-cover ratio ratio-1x1">
                     </div>
                 </div>
             </div>
